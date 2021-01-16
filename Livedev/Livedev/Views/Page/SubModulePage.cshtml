@@ -1,0 +1,259 @@
+﻿
+@{
+    ViewBag.Title = "SubModulePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="sm1" class="ml-1 font-weight-bold" onclick="IconToggle()"><a href="#"  ><i id="SmIcon" class="fa fa-caret-down " aria-hidden="true"></i> Sub Module </a> </div>
+<div class="p-0 m-1" style="border:1px solid #5d6b99;" id="s1">
+    <table class="p-0 m-0" style="border:none; width:100%; font-size:12px;">
+        <thead>
+            <tr style="background-color:#CCD5F0; color:black">
+                <th>Action</th>
+                <th>Module</th>
+                <th>Page/Menu Category</th>
+                <th>System</th>
+                <th>Sl</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="SelectById(1,'Material Management')">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="EditSubModuleById(1)">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+                <td style="font-size: 12px;">Material Management</td>
+                <td style="font-size: 12px;">Purchase Requisition (General)</td>
+                <td style="font-size: 12px;"><input type="checkbox" value="" /></td>
+                <td style="font-size: 12px;">32</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="SelectById(1,'Material Management')">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="EditSubModuleById(1)">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+                <td style="font-size: 12px;">Material Management</td>
+                <td style="font-size: 12px;">Purchase Requisition (General)</td>
+                <td style="font-size: 12px;"><input type="checkbox" value="" /></td>
+                <td style="font-size: 12px;">32</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="SelectById(1,'Material Management')">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="EditSubModuleById(1)">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+                <td style="font-size: 12px;">Material Management</td>
+                <td style="font-size: 12px;">Purchase Requisition (General)</td>
+                <td style="font-size: 12px;"><input type="checkbox" value="" /></td>
+                <td style="font-size: 12px;">32</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="SelectById(1,'Material Management')">
+                        <i class="fa fa-chevron-down"></i>
+                    </a>
+
+                    <a href="#" class="btn m-0" style="padding:0px 2.2px 0px 2.2px; background-color:#CCD5F0; font-weight:200; color:black; font-size:12px; border:1px solid #5d6b99; border-radius:50%;" onclick="EditSubModuleById(1)">
+                        <i class="fa fa-edit"></i>
+                    </a>
+                </td>
+                <td style="font-size: 12px;">Material Management</td>
+                <td style="font-size: 12px;">Purchase Requisition (General)</td>
+                <td style="font-size: 12px;"><input type="checkbox" value="" /></td>
+                <td style="font-size: 12px;">32</td>
+            </tr>
+
+
+        </tbody>
+
+    </table>
+</div>
+
+
+
+
+<div id="page1"> </div>
+<div id="table1"></div>
+
+
+
+
+
+<script>
+
+    function EditSubModuleById(id)
+    {
+
+                var parameter = { submoduleId: id }
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("EditSubModule", "Page")',
+                            dataType: "html",
+                            contentType: "application/json; charset=utf-8",
+
+                            data: JSON.stringify(parameter),
+                            success: function (result) {
+                                $('#sm').html(result);
+                            }
+
+                        });
+
+    }
+
+    function SelectById(id,module)
+    {
+
+                var parameter = { pageId: id }
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("SelectById", "Page")',
+                            dataType: "html",
+                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(parameter),
+                            success: function (result) {
+                                $('#page1').html(result).ready(function () {
+                                    $('#sm1').html('<a href="#" ><i id="SmIcon" class="fa fa-caret-down" aria-hidden="true"></i> Sub Module </a> ').ready(function () {
+                                        //$('#s1').hide();
+                                        $('#selectedData').val(module);
+                                    });
+                                });
+
+
+                            }
+
+                        });
+
+    }
+
+    function EditPageById(id)
+    {
+
+        var parameter = { pageId: id }
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("EditPageById", "Page")',
+                            dataType: "html",
+                            contentType: "application/json; charset=utf-8",
+
+                            data: JSON.stringify(parameter),
+                            success: function (result) {
+                               
+                                $('#pg').html(result);
+                            }
+
+                        });
+
+    }
+
+    function SelectTableById(id,pageName)
+    {
+
+                var parameter = { tableId: id }
+                        $.ajax({
+                            type: "POST",
+                            url: '@Url.Action("SelectTableById", "Page")',
+                            dataType: "html",
+                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(parameter),
+                            success: function (result) {
+                                $('#table1').html(result).ready(function () {
+                                    //$('#page2').html('<a href="#" ><i id="PageIcon" class="fa fa-caret-right" aria-hidden="true"></i> Page </a> ').ready(function () {
+                                        //$('#p1').hide();
+                                        $('#selectedData').val('');
+                                        $('#selectedData').val(pageName);
+
+                                    //});
+                                });
+
+
+                            }
+
+                        });
+
+    }
+
+    function PageIconToggle() {
+        if ($('#PageIcon').hasClass("fa fa-caret-right")) {
+            $('#PageIcon').removeClass("fa fa-caret-right").addClass("fa fa-caret-down").ready(function () {
+                $('#p1').show();
+                $('#selectedData').val('');
+                $('#selectedData').val('Page');
+            });
+        }
+        else {
+            $('#PageIcon').removeClass("fa fa-caret-down").addClass("fa fa-caret-right").ready(function () {
+                $('#p1').hide();
+                $('#selectedData').val('');
+                $('#selectedData').val('Page');
+            });
+        }
+
+    }
+
+    function IconToggle() {
+        if ($('#SmIcon').hasClass("fa fa-caret-right")) {
+            $('#SmIcon').removeClass("fa fa-caret-right").addClass("fa fa-caret-down").ready(function () {
+                $('#s1').show();
+                $('#selectedData').val('');
+                $('#selectedData').val('Sub Module');
+            });
+        }
+        else {
+            $('#SmIcon').removeClass("fa fa-caret-down").addClass("fa fa-caret-right").ready(function () {
+                $('#s1').hide();
+                $('#selectedData').val('');
+                $('#selectedData').val('Sub Module');
+            });
+        }
+
+    }
+
+
+    function TableIconToggle() {
+        if ($('#TableIcon').hasClass("fa fa-caret-right")) {
+            $('#TableIcon').removeClass("fa fa-caret-right").addClass("fa fa-caret-down").ready(function () {
+                $('#t1').show();
+                $('#selectedData').val('');
+                $('#selectedData').val('Table');
+            });
+        }
+        else {
+            $('#TableIcon').removeClass("fa fa-caret-down").addClass("fa fa-caret-right").ready(function () {
+                $('#t1').hide();
+                $('#selectedData').val('');
+                $('#selectedData').val('Table');
+            });
+        }
+
+    }
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+

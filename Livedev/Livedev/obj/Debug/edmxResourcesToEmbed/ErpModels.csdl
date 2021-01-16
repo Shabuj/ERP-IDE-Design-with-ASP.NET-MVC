@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ErpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Utl_Dynamic_Table_Column">
+    <Key>
+      <PropertyRef Name="ColumnId" />
+    </Key>
+    <Property Name="ColumnId" Type="Int64" Nullable="false" />
+    <Property Name="TableId" Type="Int64" />
+    <Property Name="ColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SelectColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnDisplayName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnProperty" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ControlType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ParentColumn" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ForeignKeyName" Type="Int64" />
+    <Property Name="ForeignColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ForeignDataFilterBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnWidth" Type="Int32" />
+    <Property Name="DbColumnWidth" Type="Int32" />
+    <Property Name="TransPolicyId" Type="Int32" Nullable="false" />
+    <Property Name="GlobalParamId" Type="Int32" />
+    <Property Name="GlobalParamValue" Type="Int32" />
+    <Property Name="DefaultValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="FilterBy" Type="Int32" />
+    <Property Name="User_Privilege" Type="Int32" />
+    <Property Name="IsModuleSelect" Type="Boolean" />
+    <Property Name="IsFvSelect" Type="Boolean" />
+    <Property Name="IsGvSelect" Type="Boolean" />
+    <Property Name="IsForeignTable" Type="Boolean" />
+    <Property Name="IsDefaultFocus" Type="Boolean" />
+    <Property Name="IsFvUpdate" Type="Boolean" Nullable="false" />
+    <Property Name="IsFvInsert" Type="Boolean" Nullable="false" />
+    <Property Name="IsFvDataFixed" Type="Boolean" />
+    <Property Name="IsFvForceEdit" Type="Boolean" />
+    <Property Name="DdlDataSource" Type="Int32" />
+    <Property Name="LovTableId" Type="Int64" />
+    <Property Name="TableName" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnTextExp" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="WhereExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="OrderByExpression" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SqlExpression" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="LinkType" Type="Byte" />
+    <Property Name="LinkPageId" Type="Int32" />
+    <Property Name="LinkTableId" Type="Int32" />
+    <Property Name="LinkColumnName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="LinkUrl" Type="String" MaxLength="900" FixedLength="false" Unicode="false" />
+    <Property Name="IsShow" Type="Boolean" Nullable="false" />
+    <Property Name="ReportColumn" Type="Int32" />
+    <Property Name="SlNo" Type="Decimal" Precision="18" Scale="1" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Autocode_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="FormatType" />
+      <PropertyRef Name="Format" />
+      <PropertyRef Name="SlNo" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="ColumnId" Type="Int64" Nullable="false" />
+    <Property Name="FormatType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Format" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Expression" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SlNo" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Company">
+    <Key>
+      <PropertyRef Name="Is_Vat_Inc" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="GroupId" Type="Int32" />
+    <Property Name="ReturnTypeId" Type="Byte" />
+    <Property Name="Mushak_Id" Type="Int32" />
+    <Property Name="Is_Vat_Inc" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Fifo" Type="Boolean" />
+    <Property Name="Is_Rebate_Ratio" Type="Boolean" />
+    <Property Name="Is_Deemed_Sale" Type="Boolean" />
+    <Property Name="AV_Perc" Type="Double" />
+    <Property Name="CN_DN_Valid" Type="Int32" />
+    <Property Name="Eco_Activity_Id" Type="Int32" />
+    <Property Name="Owner_Type_Id" Type="Int32" />
+    <Property Name="Comp_Catg_Id" Type="Int32" />
+    <Property Name="Comp_Type_Id" Type="Int32" />
+    <Property Name="Is_Dealer" Type="Boolean" />
+    <Property Name="Return_Period" Type="Int32" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyAlis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Owner_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Contact" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Contact_Person" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_No" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Fax_No" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email_Id" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="National_Id" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Tin_No" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Is_Central_Reg" Type="Boolean" />
+    <Property Name="Vat_No" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Thana_Id" Type="Int64" />
+    <Property Name="Distric_Id" Type="Int64" />
+    <Property Name="Post_Code" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="WebSite" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="LogoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LogoImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="GroupLogoImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="SmtpOut" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SmtpPort" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MailFromUser" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MailUserPassword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Delay_Time" Type="Int32" />
+    <Property Name="Db_Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Backup_Path" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="OP_VAT" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="OP_SD" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Adjust_Perc" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VAT_Adj_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SD_Adj_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VAT_Bal_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="SD_Bal_Amt" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Company_Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+      <PropertyRef Name="GroupName" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="GroupId" Type="Int32" Nullable="false" />
+    <Property Name="GroupName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="GroupAlis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Company_Logo">
+    <Key>
+      <PropertyRef Name="LOGO_ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="LOGO_ID" Type="Int32" Nullable="false" />
+    <Property Name="LOGO_PATH" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="LOGO_SL" Type="Int32" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Company_Owner">
+    <Key>
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="OwnerId" Type="Int32" />
+    <Property Name="OwnerCode" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OwnerDesignation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="Sl" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Company_Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="ProjectName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProjectAlis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LogoPath" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Database_Module">
+    <Key>
+      <PropertyRef Name="DatabaseId" />
+      <PropertyRef Name="DatabaseName" />
+      <PropertyRef Name="IsDeleteBtn" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="DatabaseId" Type="Int32" Nullable="false" />
+    <Property Name="DatabaseName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ModuleName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleAlis" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Dynamic_Page" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleType" Type="Int32" />
+    <Property Name="ImageFile" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ServerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IsDeleteBtn" Type="Boolean" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Sl" Type="Int32" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Database_Module_Type">
+    <Key>
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ModuleTypeId" Type="Int32" />
+    <Property Name="CompanyId" Type="Int32" />
+    <Property Name="ModuleType" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Dropdown_Property">
+    <Key>
+      <PropertyRef Name="PropertyType" />
+      <PropertyRef Name="ColumnTextExp" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="Int64" />
+    <Property Name="ColumnId" Type="Int64" />
+    <Property Name="PropertyType" Type="Int32" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ColumnTextExp" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WhereExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="OrderByExpression" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="SqlExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Filter_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="TableId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="TableId" Type="Int64" Nullable="false" />
+    <Property Name="ColumnId" Type="Int64" Nullable="false" />
+    <Property Name="OperatorId" Type="Int32" Nullable="false" />
+    <Property Name="AndExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="OrExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Global_Param">
+    <Key>
+      <PropertyRef Name="ParamId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ParamId" Type="Int32" Nullable="false" />
+    <Property Name="ParamName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="SlNo" Type="Int32" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="MenuName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" />
+    <Property Name="MenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayOrder" Type="Int32" />
+    <Property Name="IsVisible" Type="Boolean" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Module">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+      <PropertyRef Name="ModuleType" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+    </Key>
+    <Property Name="ModuleId" Type="Int64" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" />
+    <Property Name="ExistingModuleId" Type="Int64" />
+    <Property Name="IsNewCopy" Type="Boolean" />
+    <Property Name="ModuleName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleCaption" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="ReportTitle" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="IsDrilldownReport" Type="Boolean" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="ImagePath" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleType" Type="Int32" Nullable="false" />
+    <Property Name="SlNo" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Module_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="CategoryId" Type="Int64" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" />
+    <Property Name="ModuleCategory" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsSystem" Type="Boolean" />
+    <Property Name="Sl" Type="Int32" />
+    <Property Name="Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Operator">
+    <Key>
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="OperatorId" Type="Int32" Nullable="false" />
+    <Property Name="OperatorValue" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="OperatorText" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="3" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="3" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="3" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Sub_Menu">
+    <Key>
+      <PropertyRef Name="SubMenuID" />
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="SubMenuName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="SubMenuID" Type="Int32" Nullable="false" />
+    <Property Name="MenuID" Type="Int32" Nullable="false" />
+    <Property Name="SubMenuName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" />
+    <Property Name="Url" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="DisplayOrder" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="IsVisible" Type="Boolean" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Table">
+    <Key>
+      <PropertyRef Name="IsExternalDataShow" />
+      <PropertyRef Name="ObjectType" />
+      <PropertyRef Name="TemplateType" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="TableId" Type="Int64" />
+    <Property Name="ModuleId" Type="Int64" />
+    <Property Name="ApplicationId" Type="Int64" />
+    <Property Name="TableCaption" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ModuleTableCaption" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="TableName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RefreshType" Type="Byte" />
+    <Property Name="ParentTableId" Type="Int64" />
+    <Property Name="ForeignTableId" Type="Int64" />
+    <Property Name="IsExternalDataShow" Type="Boolean" Nullable="false" />
+    <Property Name="ExternalDataCaption" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="ExternalDataFilter" Type="String" MaxLength="800" FixedLength="false" Unicode="false" />
+    <Property Name="ExistingTableId" Type="Int64" />
+    <Property Name="ModuleWidth" Type="Int32" />
+    <Property Name="ModuleHeight" Type="Int32" />
+    <Property Name="FormWidth" Type="Int32" />
+    <Property Name="PositionExp" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="RowPosition" Type="Int32" />
+    <Property Name="ColPosition" Type="Int32" />
+    <Property Name="IsReadOnly" Type="Boolean" />
+    <Property Name="IsWorkFollow" Type="Boolean" />
+    <Property Name="IsAutoToggle" Type="Boolean" />
+    <Property Name="ProcedureName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ProcedureCaption" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ProcedureValidation" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ProcFireOnTrans" Type="Boolean" />
+    <Property Name="ReportProcedureName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="RptProcForWorksheet" Type="Boolean" />
+    <Property Name="ProcFooterView" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ProcFooterDml" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ReportFileName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ShowOnReport" Type="Boolean" />
+    <Property Name="SqlStatement" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+    <Property Name="ObjectType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TemplateType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SlNo" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Table_Function">
+    <Key>
+      <PropertyRef Name="TableFunctionId" />
+      <PropertyRef Name="TableId" />
+      <PropertyRef Name="ColumnName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="TableFunctionId" Type="Int64" Nullable="false" />
+    <Property Name="TableId" Type="Int64" Nullable="false" />
+    <Property Name="ColumnName" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AggregateFunction" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EvaluateValue" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="EffectColumn" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="IsDataShort" Type="Boolean" />
+    <Property Name="IsDescending" Type="Boolean" />
+    <Property Name="SLNo" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Validation_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="Int64" Nullable="false" />
+    <Property Name="ColumnId" Type="Int64" Nullable="false" />
+    <Property Name="TableId" Type="Int64" />
+    <Property Name="OperatorId" Type="Int32" Nullable="false" />
+    <Property Name="ValueExpression" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="ValueDataType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ErrorMessage" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_User_Id" Type="Int64" />
+    <Property Name="Entry_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Entry_Date" Type="DateTime" Precision="0" />
+    <Property Name="Update_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Update_Date" Type="DateTime" Precision="0" />
+    <Property Name="Check_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Check_Date" Type="DateTime" Precision="3" />
+    <Property Name="Approve_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Approve_Date" Type="DateTime" Precision="0" />
+    <Property Name="Delete_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Delete_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Approved" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Active" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="Int32" Nullable="false" />
+    <Property Name="Row_Id" Type="Guid" Nullable="false" />
+    <Property Name="Cancel_By" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="Cancel_Date" Type="DateTime" Precision="3" />
+    <Property Name="Is_Cancel" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ErpContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Utl_Dynamic_Table_Column" EntityType="Self.Utl_Dynamic_Table_Column" />
+    <EntitySet Name="Utl_Dynamic_Autocode_Property" EntityType="Self.Utl_Dynamic_Autocode_Property" />
+    <EntitySet Name="Utl_Dynamic_Company" EntityType="Self.Utl_Dynamic_Company" />
+    <EntitySet Name="Utl_Dynamic_Company_Group" EntityType="Self.Utl_Dynamic_Company_Group" />
+    <EntitySet Name="Utl_Dynamic_Company_Logo" EntityType="Self.Utl_Dynamic_Company_Logo" />
+    <EntitySet Name="Utl_Dynamic_Company_Owner" EntityType="Self.Utl_Dynamic_Company_Owner" />
+    <EntitySet Name="Utl_Dynamic_Company_Project" EntityType="Self.Utl_Dynamic_Company_Project" />
+    <EntitySet Name="Utl_Dynamic_Database_Module" EntityType="Self.Utl_Dynamic_Database_Module" />
+    <EntitySet Name="Utl_Dynamic_Database_Module_Type" EntityType="Self.Utl_Dynamic_Database_Module_Type" />
+    <EntitySet Name="Utl_Dynamic_Dropdown_Property" EntityType="Self.Utl_Dynamic_Dropdown_Property" />
+    <EntitySet Name="Utl_Dynamic_Filter_Property" EntityType="Self.Utl_Dynamic_Filter_Property" />
+    <EntitySet Name="Utl_Dynamic_Global_Param" EntityType="Self.Utl_Dynamic_Global_Param" />
+    <EntitySet Name="Utl_Dynamic_Menu" EntityType="Self.Utl_Dynamic_Menu" />
+    <EntitySet Name="Utl_Dynamic_Module" EntityType="Self.Utl_Dynamic_Module" />
+    <EntitySet Name="Utl_Dynamic_Module_Category" EntityType="Self.Utl_Dynamic_Module_Category" />
+    <EntitySet Name="Utl_Dynamic_Operator" EntityType="Self.Utl_Dynamic_Operator" />
+    <EntitySet Name="Utl_Dynamic_Sub_Menu" EntityType="Self.Utl_Dynamic_Sub_Menu" />
+    <EntitySet Name="Utl_Dynamic_Table" EntityType="Self.Utl_Dynamic_Table" />
+    <EntitySet Name="Utl_Dynamic_Table_Function" EntityType="Self.Utl_Dynamic_Table_Function" />
+    <EntitySet Name="Utl_Dynamic_Validation_Property" EntityType="Self.Utl_Dynamic_Validation_Property" />
+  </EntityContainer>
+</Schema>

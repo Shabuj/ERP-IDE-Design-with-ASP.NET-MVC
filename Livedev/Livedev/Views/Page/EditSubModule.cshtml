@@ -1,0 +1,195 @@
+﻿@*@{
+        ViewBag.Title = "EditSubModule";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
+
+
+
+<div class="ml-0  " style="width:671px; background-color:#CCD5F0"><a class="ml-1 font-weight-bold text-dark" href="#" onclick="EditSubModuleIcon()"><i id="EditSubModuleIcon" class="fa fa-caret-down" aria-hidden="true"></i> Edit Sub Module</a> </div>
+
+<div class=" mt-2" id="EditSm">
+
+    <form method="post" action="">
+        <table style="width:70%;background-color:white; border:1px  solid #CCD5F0;  font-size:13px;" border="1">
+            <tr>
+                <td>CategoryId</td>
+                <td> <input type="text" name="name" value="8" class="border-0" style="width:100%;" /></td>
+
+            </tr>
+            <tr>
+                <td>Module</td>
+                <td> <input type="text" name="name" value="Sales" class="border-0" style="width:100%;" /></td>
+            </tr>
+            <tr style="font-size:13px;">
+                <td>Page/Menu Category</td>
+                <td> <input type="text" name="name" value="Sales Title" class="border-0" style="width:100%;" /></td>
+
+            </tr>
+            <tr>
+                <td>System</td>
+                <td> <input type="checkbox" name="name" value="" class="border-0" /></td>
+            </tr>
+            <tr>
+                <td>Sl</td>
+                <td> <input type="text" name="name" value="8" class="border-0" style="width:100%;" /></td>
+
+            </tr>
+            <tr>
+                <td>Module</td>
+                <td> <input type="text" name="name" value="8" class="border-0" style="width:100%;" /></td>
+            </tr>
+
+
+        </table>
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="submit" name="name" value="Update" class="btn btn-sm  mt-1 " style="width:100%; background-color:#CCD5F0; color:black;" />
+            </div>
+
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<script>
+    function EditSubModuleIcon() {
+
+
+
+        if ($('#EditSubModuleIcon').hasClass("fa fa-caret-down")) {
+            $('#EditSubModuleIcon').removeClass("fa fa-caret-down").addClass("fa fa-caret-right").ready(function () {
+                $('#EditSm').hide();
+            });
+        }
+        else {
+            $('#EditSubModuleIcon').removeClass("fa fa-caret-right").addClass("fa fa-caret-down").ready(function () {
+                $('#EditSm').show();
+            });
+        }
+    }
+</script>
+
+    @*<div class="panel">
+            <div class="panel-body rounded">
+                <div class="row">
+                    <div class="col-md-11">
+                        <form method="post" action="">
+
+                            <div class="row ">
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> CategoryId </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="name" value="8" class="form-control-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> Module </label>
+                                        <div class="col-sm-10">
+                                            <input type="text" name="name" value="Sales" class="form-control-sm" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> Page/Menu Category </label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="name" value="Product Setup" class="form-control-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold">System </label>
+                                        <div class="col-md-10">
+                                            <input type="checkbox" name="name" value="" class="" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> Sl </label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="name" value="34" class="form-control-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> Module </label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="name" value="Sales" class="form-control-sm" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> CategoryId </label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="name" value="6" class="form-control-sm" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="ml-3 font-weight-bold"> Module </label>
+                                        <div class="col-md-10">
+                                            <input type="text" name="name" value="Sales" class="form-control-sm" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+
+                                        <div class="col-sm-6">
+
+                                            <input type="submit" name="name" value="Update" class="btn btn-info btn-block bg-info text-light form-control-sm" style="width:180px; text-align:center;" />
+                                        </div>
+
+                                </div>
+
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>*@
+
+
+
+
+
+
+
+
+

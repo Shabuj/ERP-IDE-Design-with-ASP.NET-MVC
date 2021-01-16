@@ -1,0 +1,66 @@
+﻿
+
+<div class="ml-0 " style="width:671px; background-color:#CCD5F0"><a class="ml-1 font-weight-bold text-dark" href="#" onclick="CreatePageIcon()"><i id="CreatePageIcon" class="fa fa-caret-down" aria-hidden="true"></i> Create New Page</a> </div>
+
+<div class=" mt-2" id="CreatePg">
+
+    <form method="post" action="">
+        <table style="width:70%;background-color:white; border:1px  solid #CCD5F0;  font-size:13px; color: black;" border="1">
+            <tr>
+                <td>PageId</td>
+                <td> <input type="text" name="name" value="" class="border-0" style="width:100%;" readonly /></td>
+
+            </tr>
+            <tr>
+                <td>Module</td>
+                <td> <input type="text" name="name" value="" class="border-0" style="width:100%;" /></td>
+            </tr>
+            <tr>
+                <td>Page/Menu Category</td>
+                <td> <input type="text" name="name" value="" class="border-0" style="width:100%;" /></td>
+
+            </tr>
+            <tr>
+                <td>Page Title</td>
+                <td class="ml-2"> <input type="checkbox" name="name" value="" class="border-0" /></td>
+            </tr>
+            <tr>
+                <td>Page Template</td>
+                <td> <input type="text" name="name" value="" class="border-0" style="width:100%;" /></td>
+
+            </tr>
+            
+
+
+        </table>
+        <div class="row">
+            <div class="col-sm-3">
+                <input type="submit" name="name" value="Save" class="btn btn-sm  mt-1 " style="width:100%; background-color:#CCD5F0; color:black;" />
+            </div>
+
+        </div>
+
+    </form>
+
+
+</div>
+
+
+<script>
+    function CreatePageIcon() {
+
+
+
+        if ($('#CreatePageIcon').hasClass("fa fa-caret-down")) {
+            $('#CreatePageIcon').removeClass("fa fa-caret-down").addClass("fa fa-caret-right").ready(function () {
+                $('#CreatePg').hide();
+            });
+        }
+        else {
+            $('#CreatePageIcon').removeClass("fa fa-caret-right").addClass("fa fa-caret-down").ready(function () {
+                $('#CreatePg').show();
+            });
+        }
+    }
+</script>
+

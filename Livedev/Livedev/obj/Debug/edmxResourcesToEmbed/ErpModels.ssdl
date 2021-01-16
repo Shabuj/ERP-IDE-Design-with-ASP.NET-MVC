@@ -1,0 +1,1564 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ErpModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Autocode_Property' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Autocode_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="FormatType" />
+      <PropertyRef Name="Format" />
+      <PropertyRef Name="SlNo" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="bigint" Nullable="false" />
+    <Property Name="ColumnId" Type="bigint" Nullable="false" />
+    <Property Name="FormatType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Format" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Expression" Type="varchar" MaxLength="8000" />
+    <Property Name="ColumnName" Type="varchar" MaxLength="200" />
+    <Property Name="SlNo" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Company' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Company">
+    <Key>
+      <PropertyRef Name="Is_Vat_Inc" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="GroupId" Type="int" />
+    <Property Name="ReturnTypeId" Type="tinyint" />
+    <Property Name="Mushak_Id" Type="int" />
+    <Property Name="Is_Vat_Inc" Type="bit" Nullable="false" />
+    <Property Name="Is_Fifo" Type="bit" />
+    <Property Name="Is_Rebate_Ratio" Type="bit" />
+    <Property Name="Is_Deemed_Sale" Type="bit" />
+    <Property Name="AV_Perc" Type="float" />
+    <Property Name="CN_DN_Valid" Type="int" />
+    <Property Name="Eco_Activity_Id" Type="int" />
+    <Property Name="Owner_Type_Id" Type="int" />
+    <Property Name="Comp_Catg_Id" Type="int" />
+    <Property Name="Comp_Type_Id" Type="int" />
+    <Property Name="Is_Dealer" Type="bit" />
+    <Property Name="Return_Period" Type="int" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="CompanyAlis" Type="varchar" MaxLength="20" />
+    <Property Name="Owner_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Address" Type="varchar" MaxLength="300" Nullable="false" />
+    <Property Name="Location" Type="varchar" MaxLength="300" />
+    <Property Name="Contact" Type="varchar" MaxLength="300" />
+    <Property Name="Contact_Person" Type="varchar" MaxLength="200" />
+    <Property Name="Phone_No" Type="varchar" MaxLength="200" />
+    <Property Name="Fax_No" Type="varchar" MaxLength="200" />
+    <Property Name="Email_Id" Type="varchar" MaxLength="200" />
+    <Property Name="National_Id" Type="varchar" MaxLength="200" />
+    <Property Name="Tin_No" Type="varchar" MaxLength="200" />
+    <Property Name="Is_Central_Reg" Type="bit" />
+    <Property Name="Vat_No" Type="varchar" MaxLength="200" />
+    <Property Name="Thana_Id" Type="bigint" />
+    <Property Name="Distric_Id" Type="bigint" />
+    <Property Name="Post_Code" Type="varchar" MaxLength="4" />
+    <Property Name="WebSite" Type="varchar" MaxLength="300" />
+    <Property Name="LogoPath" Type="varchar" MaxLength="100" />
+    <Property Name="LogoImage" Type="image" />
+    <Property Name="GroupLogoImage" Type="image" />
+    <Property Name="SmtpOut" Type="varchar" MaxLength="100" />
+    <Property Name="SmtpPort" Type="varchar" MaxLength="100" />
+    <Property Name="MailFromUser" Type="varchar" MaxLength="100" />
+    <Property Name="MailUserPassword" Type="varchar" MaxLength="100" />
+    <Property Name="Delay_Time" Type="int" />
+    <Property Name="Db_Name" Type="varchar" MaxLength="200" />
+    <Property Name="Backup_Path" Type="varchar" MaxLength="300" />
+    <Property Name="OP_VAT" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="OP_SD" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Adjust_Perc" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VAT_Adj_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SD_Adj_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="VAT_Bal_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SD_Bal_Amt" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Company_Group' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Company_Group">
+    <Key>
+      <PropertyRef Name="GroupId" />
+      <PropertyRef Name="GroupName" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="GroupId" Type="int" Nullable="false" />
+    <Property Name="GroupName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="GroupAlis" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="LogoPath" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Company_Logo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Company_Logo">
+    <Key>
+      <PropertyRef Name="LOGO_ID" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="LOGO_ID" Type="int" Nullable="false" />
+    <Property Name="LOGO_PATH" Type="varchar" MaxLength="500" />
+    <Property Name="LOGO_SL" Type="int" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Company_Owner' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Company_Owner">
+    <Key>
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="OwnerId" Type="int" />
+    <Property Name="OwnerCode" Type="varchar" MaxLength="100" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="500" />
+    <Property Name="OwnerDesignation" Type="varchar" MaxLength="500" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="Sl" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Company_Project' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Company_Project">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+      <PropertyRef Name="CompanyId" />
+      <PropertyRef Name="ProjectName" />
+      <PropertyRef Name="Address" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ProjectId" Type="int" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="ProjectName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ProjectAlis" Type="varchar" MaxLength="20" />
+    <Property Name="Address" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="LogoPath" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Database_Module' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Database_Module">
+    <Key>
+      <PropertyRef Name="DatabaseId" />
+      <PropertyRef Name="DatabaseName" />
+      <PropertyRef Name="IsDeleteBtn" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="DatabaseId" Type="int" Nullable="false" />
+    <Property Name="DatabaseName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="200" />
+    <Property Name="ModuleAlis" Type="varchar" MaxLength="50" />
+    <Property Name="Dynamic_Page" Type="varchar" MaxLength="100" />
+    <Property Name="ModuleType" Type="int" />
+    <Property Name="ImageFile" Type="varchar" MaxLength="500" />
+    <Property Name="ServerName" Type="varchar" MaxLength="100" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="IsDeleteBtn" Type="bit" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Sl" Type="int" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Database_Module_Type' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Database_Module_Type">
+    <Key>
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ModuleTypeId" Type="int" />
+    <Property Name="CompanyId" Type="int" />
+    <Property Name="ModuleType" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Dropdown_Property' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Dropdown_Property">
+    <Key>
+      <PropertyRef Name="PropertyType" />
+      <PropertyRef Name="ColumnTextExp" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="bigint" />
+    <Property Name="ColumnId" Type="bigint" />
+    <Property Name="PropertyType" Type="int" Nullable="false" />
+    <Property Name="TableName" Type="varchar" MaxLength="400" />
+    <Property Name="ColumnValue" Type="varchar" MaxLength="500" />
+    <Property Name="ColumnText" Type="varchar" MaxLength="500" />
+    <Property Name="ColumnTextExp" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="WhereExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="OrderByExpression" Type="varchar" MaxLength="500" />
+    <Property Name="SqlExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Filter_Property' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Filter_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="TableId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="bigint" Nullable="false" />
+    <Property Name="TableId" Type="bigint" Nullable="false" />
+    <Property Name="ColumnId" Type="bigint" Nullable="false" />
+    <Property Name="OperatorId" Type="int" Nullable="false" />
+    <Property Name="AndExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="OrExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Global_Param' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Global_Param">
+    <Key>
+      <PropertyRef Name="ParamId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="ParamId" Type="int" Nullable="false" />
+    <Property Name="ParamName" Type="varchar" MaxLength="200" />
+    <Property Name="SlNo" Type="int" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Menu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Menu">
+    <Key>
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="MenuName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" />
+    <Property Name="MenuName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Url" Type="varchar" MaxLength="250" />
+    <Property Name="DisplayOrder" Type="int" />
+    <Property Name="IsVisible" Type="bit" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Module' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Module">
+    <Key>
+      <PropertyRef Name="ModuleId" />
+      <PropertyRef Name="ModuleType" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+    </Key>
+    <Property Name="ModuleId" Type="bigint" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" />
+    <Property Name="ExistingModuleId" Type="bigint" />
+    <Property Name="IsNewCopy" Type="bit" />
+    <Property Name="ModuleName" Type="varchar" MaxLength="200" />
+    <Property Name="ModuleCaption" Type="varchar" MaxLength="800" />
+    <Property Name="ReportTitle" Type="varchar" MaxLength="800" />
+    <Property Name="IsDrilldownReport" Type="bit" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="ImagePath" Type="varchar" MaxLength="200" />
+    <Property Name="ModuleType" Type="int" Nullable="false" />
+    <Property Name="SlNo" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Module_Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Module_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="CategoryId" Type="bigint" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" />
+    <Property Name="ModuleCategory" Type="varchar" MaxLength="200" />
+    <Property Name="IsSystem" Type="bit" />
+    <Property Name="Sl" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Operator' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Operator">
+    <Key>
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Cancel" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Work_Follow_Position" />
+    </Key>
+    <Property Name="OperatorId" Type="int" Nullable="false" />
+    <Property Name="OperatorValue" Type="varchar" MaxLength="500" />
+    <Property Name="OperatorText" Type="varchar" MaxLength="500" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="datetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="datetime" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="datetime" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Sub_Menu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Sub_Menu">
+    <Key>
+      <PropertyRef Name="SubMenuID" />
+      <PropertyRef Name="MenuID" />
+      <PropertyRef Name="SubMenuName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="SubMenuID" Type="int" Nullable="false" />
+    <Property Name="MenuID" Type="int" Nullable="false" />
+    <Property Name="SubMenuName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CategoryId" Type="int" />
+    <Property Name="Url" Type="varchar" MaxLength="250" />
+    <Property Name="DisplayOrder" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="IsVisible" Type="bit" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Table' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Table">
+    <Key>
+      <PropertyRef Name="IsExternalDataShow" />
+      <PropertyRef Name="ObjectType" />
+      <PropertyRef Name="TemplateType" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="TableId" Type="bigint" />
+    <Property Name="ModuleId" Type="bigint" />
+    <Property Name="ApplicationId" Type="bigint" />
+    <Property Name="TableCaption" Type="varchar" MaxLength="400" />
+    <Property Name="ModuleTableCaption" Type="varchar" MaxLength="400" />
+    <Property Name="TableName" Type="varchar" MaxLength="200" />
+    <Property Name="RefreshType" Type="tinyint" />
+    <Property Name="ParentTableId" Type="bigint" />
+    <Property Name="ForeignTableId" Type="bigint" />
+    <Property Name="IsExternalDataShow" Type="bit" Nullable="false" />
+    <Property Name="ExternalDataCaption" Type="varchar" MaxLength="400" />
+    <Property Name="ExternalDataFilter" Type="varchar" MaxLength="800" />
+    <Property Name="ExistingTableId" Type="bigint" />
+    <Property Name="ModuleWidth" Type="int" />
+    <Property Name="ModuleHeight" Type="int" />
+    <Property Name="FormWidth" Type="int" />
+    <Property Name="PositionExp" Type="varchar" MaxLength="500" />
+    <Property Name="RowPosition" Type="int" />
+    <Property Name="ColPosition" Type="int" />
+    <Property Name="IsReadOnly" Type="bit" />
+    <Property Name="IsWorkFollow" Type="bit" />
+    <Property Name="IsAutoToggle" Type="bit" />
+    <Property Name="ProcedureName" Type="varchar" MaxLength="200" />
+    <Property Name="ProcedureCaption" Type="varchar" MaxLength="200" />
+    <Property Name="ProcedureValidation" Type="varchar" MaxLength="500" />
+    <Property Name="ProcFireOnTrans" Type="bit" />
+    <Property Name="ReportProcedureName" Type="varchar" MaxLength="200" />
+    <Property Name="RptProcForWorksheet" Type="bit" />
+    <Property Name="ProcFooterView" Type="varchar" MaxLength="500" />
+    <Property Name="ProcFooterDml" Type="varchar" MaxLength="500" />
+    <Property Name="ReportFileName" Type="varchar" MaxLength="500" />
+    <Property Name="ShowOnReport" Type="bit" />
+    <Property Name="SqlStatement" Type="varchar" MaxLength="8000" />
+    <Property Name="ObjectType" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="TemplateType" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="SlNo" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Utl_Dynamic_Table_Column">
+    <Key>
+      <PropertyRef Name="ColumnId" />
+    </Key>
+    <Property Name="ColumnId" Type="bigint" Nullable="false" />
+    <Property Name="TableId" Type="bigint" />
+    <Property Name="ColumnName" Type="varchar" MaxLength="200" />
+    <Property Name="SelectColumnName" Type="varchar" MaxLength="200" />
+    <Property Name="ColumnDisplayName" Type="varchar" MaxLength="500" />
+    <Property Name="ColumnProperty" Type="varchar" MaxLength="100" />
+    <Property Name="ControlType" Type="varchar" MaxLength="100" />
+    <Property Name="ParentColumn" Type="varchar" MaxLength="300" />
+    <Property Name="ForeignKeyName" Type="bigint" />
+    <Property Name="ForeignColumnName" Type="varchar" MaxLength="200" />
+    <Property Name="ForeignDataFilterBy" Type="varchar" MaxLength="200" />
+    <Property Name="ColumnWidth" Type="int" />
+    <Property Name="DbColumnWidth" Type="int" />
+    <Property Name="TransPolicyId" Type="int" Nullable="false" />
+    <Property Name="GlobalParamId" Type="int" />
+    <Property Name="GlobalParamValue" Type="int" />
+    <Property Name="DefaultValue" Type="varchar" MaxLength="500" />
+    <Property Name="FilterBy" Type="int" />
+    <Property Name="User_Privilege" Type="int" />
+    <Property Name="IsModuleSelect" Type="bit" />
+    <Property Name="IsFvSelect" Type="bit" />
+    <Property Name="IsGvSelect" Type="bit" />
+    <Property Name="IsForeignTable" Type="bit" />
+    <Property Name="IsDefaultFocus" Type="bit" />
+    <Property Name="IsFvUpdate" Type="bit" Nullable="false" />
+    <Property Name="IsFvInsert" Type="bit" Nullable="false" />
+    <Property Name="IsFvDataFixed" Type="bit" />
+    <Property Name="IsFvForceEdit" Type="bit" />
+    <Property Name="DdlDataSource" Type="int" />
+    <Property Name="LovTableId" Type="bigint" />
+    <Property Name="TableName" Type="varchar" MaxLength="400" />
+    <Property Name="ColumnValue" Type="varchar" MaxLength="500" />
+    <Property Name="ColumnText" Type="varchar" MaxLength="500" />
+    <Property Name="ColumnTextExp" Type="varchar" MaxLength="8000" />
+    <Property Name="WhereExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="OrderByExpression" Type="varchar" MaxLength="500" />
+    <Property Name="SqlExpression" Type="varchar" MaxLength="8000" />
+    <Property Name="LinkType" Type="tinyint" />
+    <Property Name="LinkPageId" Type="int" />
+    <Property Name="LinkTableId" Type="int" />
+    <Property Name="LinkColumnName" Type="varchar" MaxLength="500" />
+    <Property Name="LinkUrl" Type="varchar" MaxLength="900" />
+    <Property Name="IsShow" Type="bit" Nullable="false" />
+    <Property Name="ReportColumn" Type="int" />
+    <Property Name="SlNo" Type="decimal" Precision="18" Scale="1" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Table_Function' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Table_Function">
+    <Key>
+      <PropertyRef Name="TableFunctionId" />
+      <PropertyRef Name="TableId" />
+      <PropertyRef Name="ColumnName" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="TableFunctionId" Type="bigint" Nullable="false" />
+    <Property Name="TableId" Type="bigint" Nullable="false" />
+    <Property Name="ColumnName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="AggregateFunction" Type="varchar" MaxLength="100" />
+    <Property Name="EvaluateValue" Type="varchar" MaxLength="2000" />
+    <Property Name="EffectColumn" Type="varchar" MaxLength="200" />
+    <Property Name="IsDataShort" Type="bit" />
+    <Property Name="IsDescending" Type="bit" />
+    <Property Name="SLNo" Type="decimal" Precision="18" Scale="1" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Validation_Property' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Validation_Property">
+    <Key>
+      <PropertyRef Name="PropertyId" />
+      <PropertyRef Name="ColumnId" />
+      <PropertyRef Name="OperatorId" />
+      <PropertyRef Name="IsActive" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="PropertyId" Type="bigint" Nullable="false" />
+    <Property Name="ColumnId" Type="bigint" Nullable="false" />
+    <Property Name="TableId" Type="bigint" />
+    <Property Name="OperatorId" Type="int" Nullable="false" />
+    <Property Name="ValueExpression" Type="varchar" MaxLength="1000" />
+    <Property Name="ValueDataType" Type="varchar" MaxLength="50" />
+    <Property Name="ErrorMessage" Type="varchar" MaxLength="1000" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ErpModelStoreContainer">
+    <EntitySet Name="Utl_Dynamic_Table_Column" EntityType="Self.Utl_Dynamic_Table_Column" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Utl_Dynamic_Autocode_Property" EntityType="Self.Utl_Dynamic_Autocode_Property" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Autocode_Property].[PropertyId] AS [PropertyId], 
+    [Utl_Dynamic_Autocode_Property].[ColumnId] AS [ColumnId], 
+    [Utl_Dynamic_Autocode_Property].[FormatType] AS [FormatType], 
+    [Utl_Dynamic_Autocode_Property].[Format] AS [Format], 
+    [Utl_Dynamic_Autocode_Property].[Expression] AS [Expression], 
+    [Utl_Dynamic_Autocode_Property].[ColumnName] AS [ColumnName], 
+    [Utl_Dynamic_Autocode_Property].[SlNo] AS [SlNo], 
+    [Utl_Dynamic_Autocode_Property].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Autocode_Property].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Autocode_Property].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Autocode_Property].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Autocode_Property].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Autocode_Property].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Autocode_Property].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Autocode_Property].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Autocode_Property].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Autocode_Property].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Autocode_Property].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Autocode_Property].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Autocode_Property].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Autocode_Property].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Autocode_Property].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Autocode_Property].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Autocode_Property].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Autocode_Property].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Autocode_Property].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Autocode_Property].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Autocode_Property].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Autocode_Property] AS [Utl_Dynamic_Autocode_Property]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Company" EntityType="Self.Utl_Dynamic_Company" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Company].[CompanyId] AS [CompanyId], 
+    [Utl_Dynamic_Company].[GroupId] AS [GroupId], 
+    [Utl_Dynamic_Company].[ReturnTypeId] AS [ReturnTypeId], 
+    [Utl_Dynamic_Company].[Mushak_Id] AS [Mushak_Id], 
+    [Utl_Dynamic_Company].[Is_Vat_Inc] AS [Is_Vat_Inc], 
+    [Utl_Dynamic_Company].[Is_Fifo] AS [Is_Fifo], 
+    [Utl_Dynamic_Company].[Is_Rebate_Ratio] AS [Is_Rebate_Ratio], 
+    [Utl_Dynamic_Company].[Is_Deemed_Sale] AS [Is_Deemed_Sale], 
+    [Utl_Dynamic_Company].[AV_Perc] AS [AV_Perc], 
+    [Utl_Dynamic_Company].[CN_DN_Valid] AS [CN_DN_Valid], 
+    [Utl_Dynamic_Company].[Eco_Activity_Id] AS [Eco_Activity_Id], 
+    [Utl_Dynamic_Company].[Owner_Type_Id] AS [Owner_Type_Id], 
+    [Utl_Dynamic_Company].[Comp_Catg_Id] AS [Comp_Catg_Id], 
+    [Utl_Dynamic_Company].[Comp_Type_Id] AS [Comp_Type_Id], 
+    [Utl_Dynamic_Company].[Is_Dealer] AS [Is_Dealer], 
+    [Utl_Dynamic_Company].[Return_Period] AS [Return_Period], 
+    [Utl_Dynamic_Company].[CompanyName] AS [CompanyName], 
+    [Utl_Dynamic_Company].[CompanyAlis] AS [CompanyAlis], 
+    [Utl_Dynamic_Company].[Owner_Name] AS [Owner_Name], 
+    [Utl_Dynamic_Company].[Address] AS [Address], 
+    [Utl_Dynamic_Company].[Location] AS [Location], 
+    [Utl_Dynamic_Company].[Contact] AS [Contact], 
+    [Utl_Dynamic_Company].[Contact_Person] AS [Contact_Person], 
+    [Utl_Dynamic_Company].[Phone_No] AS [Phone_No], 
+    [Utl_Dynamic_Company].[Fax_No] AS [Fax_No], 
+    [Utl_Dynamic_Company].[Email_Id] AS [Email_Id], 
+    [Utl_Dynamic_Company].[National_Id] AS [National_Id], 
+    [Utl_Dynamic_Company].[Tin_No] AS [Tin_No], 
+    [Utl_Dynamic_Company].[Is_Central_Reg] AS [Is_Central_Reg], 
+    [Utl_Dynamic_Company].[Vat_No] AS [Vat_No], 
+    [Utl_Dynamic_Company].[Thana_Id] AS [Thana_Id], 
+    [Utl_Dynamic_Company].[Distric_Id] AS [Distric_Id], 
+    [Utl_Dynamic_Company].[Post_Code] AS [Post_Code], 
+    [Utl_Dynamic_Company].[WebSite] AS [WebSite], 
+    [Utl_Dynamic_Company].[LogoPath] AS [LogoPath], 
+    [Utl_Dynamic_Company].[LogoImage] AS [LogoImage], 
+    [Utl_Dynamic_Company].[GroupLogoImage] AS [GroupLogoImage], 
+    [Utl_Dynamic_Company].[SmtpOut] AS [SmtpOut], 
+    [Utl_Dynamic_Company].[SmtpPort] AS [SmtpPort], 
+    [Utl_Dynamic_Company].[MailFromUser] AS [MailFromUser], 
+    [Utl_Dynamic_Company].[MailUserPassword] AS [MailUserPassword], 
+    [Utl_Dynamic_Company].[Delay_Time] AS [Delay_Time], 
+    [Utl_Dynamic_Company].[Db_Name] AS [Db_Name], 
+    [Utl_Dynamic_Company].[Backup_Path] AS [Backup_Path], 
+    [Utl_Dynamic_Company].[OP_VAT] AS [OP_VAT], 
+    [Utl_Dynamic_Company].[OP_SD] AS [OP_SD], 
+    [Utl_Dynamic_Company].[Adjust_Perc] AS [Adjust_Perc], 
+    [Utl_Dynamic_Company].[VAT_Adj_Amt] AS [VAT_Adj_Amt], 
+    [Utl_Dynamic_Company].[SD_Adj_Amt] AS [SD_Adj_Amt], 
+    [Utl_Dynamic_Company].[VAT_Bal_Amt] AS [VAT_Bal_Amt], 
+    [Utl_Dynamic_Company].[SD_Bal_Amt] AS [SD_Bal_Amt], 
+    [Utl_Dynamic_Company].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Company].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Company].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Company].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Company].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Company].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Company].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Company].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Company].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Company].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Company].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Company].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Company].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Company].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Company].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Company].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Company].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Company].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Company] AS [Utl_Dynamic_Company]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Company_Group" EntityType="Self.Utl_Dynamic_Company_Group" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Company_Group].[GroupId] AS [GroupId], 
+    [Utl_Dynamic_Company_Group].[GroupName] AS [GroupName], 
+    [Utl_Dynamic_Company_Group].[GroupAlis] AS [GroupAlis], 
+    [Utl_Dynamic_Company_Group].[Address] AS [Address], 
+    [Utl_Dynamic_Company_Group].[LogoPath] AS [LogoPath], 
+    [Utl_Dynamic_Company_Group].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Company_Group].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Company_Group].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Company_Group].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Company_Group].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Company_Group].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Company_Group].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Company_Group].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Company_Group].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Company_Group].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Company_Group].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Company_Group].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Company_Group].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Company_Group].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Company_Group].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Company_Group].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Company_Group].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Company_Group].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Company_Group].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Company_Group] AS [Utl_Dynamic_Company_Group]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Company_Logo" EntityType="Self.Utl_Dynamic_Company_Logo" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Company_Logo].[LOGO_ID] AS [LOGO_ID], 
+    [Utl_Dynamic_Company_Logo].[LOGO_PATH] AS [LOGO_PATH], 
+    [Utl_Dynamic_Company_Logo].[LOGO_SL] AS [LOGO_SL], 
+    [Utl_Dynamic_Company_Logo].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Company_Logo].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Company_Logo].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Company_Logo].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Company_Logo].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Company_Logo].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Company_Logo].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Company_Logo].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Company_Logo].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Company_Logo].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Company_Logo].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Company_Logo].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Company_Logo].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Company_Logo].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Company_Logo].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Company_Logo].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Company_Logo].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Company_Logo].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Company_Logo] AS [Utl_Dynamic_Company_Logo]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Company_Owner" EntityType="Self.Utl_Dynamic_Company_Owner" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Company_Owner].[OwnerId] AS [OwnerId], 
+    [Utl_Dynamic_Company_Owner].[OwnerCode] AS [OwnerCode], 
+    [Utl_Dynamic_Company_Owner].[OwnerName] AS [OwnerName], 
+    [Utl_Dynamic_Company_Owner].[OwnerDesignation] AS [OwnerDesignation], 
+    [Utl_Dynamic_Company_Owner].[CompanyId] AS [CompanyId], 
+    [Utl_Dynamic_Company_Owner].[Sl] AS [Sl], 
+    [Utl_Dynamic_Company_Owner].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Company_Owner].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Company_Owner].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Company_Owner].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Company_Owner].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Company_Owner].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Company_Owner].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Company_Owner].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Company_Owner].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Company_Owner].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Company_Owner].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Company_Owner].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Company_Owner].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Company_Owner].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Company_Owner].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Company_Owner].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Company_Owner].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Company_Owner].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Company_Owner] AS [Utl_Dynamic_Company_Owner]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Company_Project" EntityType="Self.Utl_Dynamic_Company_Project" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Company_Project].[ProjectId] AS [ProjectId], 
+    [Utl_Dynamic_Company_Project].[CompanyId] AS [CompanyId], 
+    [Utl_Dynamic_Company_Project].[ProjectName] AS [ProjectName], 
+    [Utl_Dynamic_Company_Project].[ProjectAlis] AS [ProjectAlis], 
+    [Utl_Dynamic_Company_Project].[Address] AS [Address], 
+    [Utl_Dynamic_Company_Project].[LogoPath] AS [LogoPath], 
+    [Utl_Dynamic_Company_Project].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Company_Project].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Company_Project].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Company_Project].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Company_Project].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Company_Project].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Company_Project].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Company_Project].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Company_Project].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Company_Project].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Company_Project].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Company_Project].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Company_Project].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Company_Project].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Company_Project].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Company_Project].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Company_Project].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Company_Project].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Company_Project].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Company_Project] AS [Utl_Dynamic_Company_Project]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Database_Module" EntityType="Self.Utl_Dynamic_Database_Module" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Database_Module].[DatabaseId] AS [DatabaseId], 
+    [Utl_Dynamic_Database_Module].[DatabaseName] AS [DatabaseName], 
+    [Utl_Dynamic_Database_Module].[ModuleName] AS [ModuleName], 
+    [Utl_Dynamic_Database_Module].[ModuleAlis] AS [ModuleAlis], 
+    [Utl_Dynamic_Database_Module].[Dynamic_Page] AS [Dynamic_Page], 
+    [Utl_Dynamic_Database_Module].[ModuleType] AS [ModuleType], 
+    [Utl_Dynamic_Database_Module].[ImageFile] AS [ImageFile], 
+    [Utl_Dynamic_Database_Module].[ServerName] AS [ServerName], 
+    [Utl_Dynamic_Database_Module].[UserName] AS [UserName], 
+    [Utl_Dynamic_Database_Module].[Password] AS [Password], 
+    [Utl_Dynamic_Database_Module].[Status] AS [Status], 
+    [Utl_Dynamic_Database_Module].[IsDeleteBtn] AS [IsDeleteBtn], 
+    [Utl_Dynamic_Database_Module].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Database_Module].[Sl] AS [Sl], 
+    [Utl_Dynamic_Database_Module].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Database_Module].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Database_Module].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Database_Module].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Database_Module].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Database_Module].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Database_Module].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Database_Module].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Database_Module].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Database_Module].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Database_Module].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Database_Module].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Database_Module].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Database_Module].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Database_Module].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Database_Module].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Database_Module].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Database_Module].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Database_Module] AS [Utl_Dynamic_Database_Module]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Database_Module_Type" EntityType="Self.Utl_Dynamic_Database_Module_Type" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Database_Module_Type].[ModuleTypeId] AS [ModuleTypeId], 
+    [Utl_Dynamic_Database_Module_Type].[CompanyId] AS [CompanyId], 
+    [Utl_Dynamic_Database_Module_Type].[ModuleType] AS [ModuleType], 
+    [Utl_Dynamic_Database_Module_Type].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Database_Module_Type].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Database_Module_Type].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Database_Module_Type].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Database_Module_Type].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Database_Module_Type].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Database_Module_Type].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Database_Module_Type].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Database_Module_Type].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Database_Module_Type].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Database_Module_Type].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Database_Module_Type].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Database_Module_Type].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Database_Module_Type].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Database_Module_Type] AS [Utl_Dynamic_Database_Module_Type]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Dropdown_Property" EntityType="Self.Utl_Dynamic_Dropdown_Property" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Dropdown_Property].[PropertyId] AS [PropertyId], 
+    [Utl_Dynamic_Dropdown_Property].[ColumnId] AS [ColumnId], 
+    [Utl_Dynamic_Dropdown_Property].[PropertyType] AS [PropertyType], 
+    [Utl_Dynamic_Dropdown_Property].[TableName] AS [TableName], 
+    [Utl_Dynamic_Dropdown_Property].[ColumnValue] AS [ColumnValue], 
+    [Utl_Dynamic_Dropdown_Property].[ColumnText] AS [ColumnText], 
+    [Utl_Dynamic_Dropdown_Property].[ColumnTextExp] AS [ColumnTextExp], 
+    [Utl_Dynamic_Dropdown_Property].[WhereExpression] AS [WhereExpression], 
+    [Utl_Dynamic_Dropdown_Property].[OrderByExpression] AS [OrderByExpression], 
+    [Utl_Dynamic_Dropdown_Property].[SqlExpression] AS [SqlExpression], 
+    [Utl_Dynamic_Dropdown_Property].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Dropdown_Property].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Dropdown_Property].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Dropdown_Property].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Dropdown_Property].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Dropdown_Property].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Dropdown_Property].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Dropdown_Property].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Dropdown_Property].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Dropdown_Property].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Dropdown_Property].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Dropdown_Property].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Dropdown_Property].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Dropdown_Property].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Dropdown_Property].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Dropdown_Property].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Dropdown_Property] AS [Utl_Dynamic_Dropdown_Property]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Filter_Property" EntityType="Self.Utl_Dynamic_Filter_Property" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Filter_Property].[PropertyId] AS [PropertyId], 
+    [Utl_Dynamic_Filter_Property].[TableId] AS [TableId], 
+    [Utl_Dynamic_Filter_Property].[ColumnId] AS [ColumnId], 
+    [Utl_Dynamic_Filter_Property].[OperatorId] AS [OperatorId], 
+    [Utl_Dynamic_Filter_Property].[AndExpression] AS [AndExpression], 
+    [Utl_Dynamic_Filter_Property].[OrExpression] AS [OrExpression], 
+    [Utl_Dynamic_Filter_Property].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Filter_Property].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Filter_Property].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Filter_Property].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Filter_Property].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Filter_Property].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Filter_Property].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Filter_Property].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Filter_Property].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Filter_Property].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Filter_Property].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Filter_Property].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Filter_Property].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Filter_Property].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Filter_Property].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Filter_Property].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Filter_Property].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Filter_Property].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Filter_Property].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Filter_Property].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Filter_Property].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Filter_Property] AS [Utl_Dynamic_Filter_Property]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Global_Param" EntityType="Self.Utl_Dynamic_Global_Param" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Global_Param].[ParamId] AS [ParamId], 
+    [Utl_Dynamic_Global_Param].[ParamName] AS [ParamName], 
+    [Utl_Dynamic_Global_Param].[SlNo] AS [SlNo], 
+    [Utl_Dynamic_Global_Param].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Global_Param].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Global_Param].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Global_Param].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Global_Param].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Global_Param].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Global_Param].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Global_Param].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Global_Param].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Global_Param].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Global_Param].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Global_Param].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Global_Param].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Global_Param].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Global_Param].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Global_Param].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Global_Param].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Global_Param].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Global_Param].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Global_Param] AS [Utl_Dynamic_Global_Param]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Menu" EntityType="Self.Utl_Dynamic_Menu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Menu].[MenuID] AS [MenuID], 
+    [Utl_Dynamic_Menu].[ApplicationId] AS [ApplicationId], 
+    [Utl_Dynamic_Menu].[MenuName] AS [MenuName], 
+    [Utl_Dynamic_Menu].[Url] AS [Url], 
+    [Utl_Dynamic_Menu].[DisplayOrder] AS [DisplayOrder], 
+    [Utl_Dynamic_Menu].[IsVisible] AS [IsVisible], 
+    [Utl_Dynamic_Menu].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Menu].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Menu].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Menu].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Menu].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Menu].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Menu].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Menu].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Menu].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Menu].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Menu].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Menu].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Menu].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Menu].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Menu].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Menu].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Menu].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Menu].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Menu].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Menu].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Menu] AS [Utl_Dynamic_Menu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Module" EntityType="Self.Utl_Dynamic_Module" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Module].[ModuleId] AS [ModuleId], 
+    [Utl_Dynamic_Module].[ApplicationId] AS [ApplicationId], 
+    [Utl_Dynamic_Module].[ExistingModuleId] AS [ExistingModuleId], 
+    [Utl_Dynamic_Module].[IsNewCopy] AS [IsNewCopy], 
+    [Utl_Dynamic_Module].[ModuleName] AS [ModuleName], 
+    [Utl_Dynamic_Module].[ModuleCaption] AS [ModuleCaption], 
+    [Utl_Dynamic_Module].[ReportTitle] AS [ReportTitle], 
+    [Utl_Dynamic_Module].[IsDrilldownReport] AS [IsDrilldownReport], 
+    [Utl_Dynamic_Module].[CategoryId] AS [CategoryId], 
+    [Utl_Dynamic_Module].[ImagePath] AS [ImagePath], 
+    [Utl_Dynamic_Module].[ModuleType] AS [ModuleType], 
+    [Utl_Dynamic_Module].[SlNo] AS [SlNo], 
+    [Utl_Dynamic_Module].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Module].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Module].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Module].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Module].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Module].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Module].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Module].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Module].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Module].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Module].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Module].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Module].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Module].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Module].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Module].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Module].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Module].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Module].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Module].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Module].[Row_Id] AS [Row_Id]
+    FROM [dbo].[Utl_Dynamic_Module] AS [Utl_Dynamic_Module]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Module_Category" EntityType="Self.Utl_Dynamic_Module_Category" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Module_Category].[CategoryId] AS [CategoryId], 
+    [Utl_Dynamic_Module_Category].[ApplicationId] AS [ApplicationId], 
+    [Utl_Dynamic_Module_Category].[ModuleCategory] AS [ModuleCategory], 
+    [Utl_Dynamic_Module_Category].[IsSystem] AS [IsSystem], 
+    [Utl_Dynamic_Module_Category].[Sl] AS [Sl], 
+    [Utl_Dynamic_Module_Category].[Code] AS [Code], 
+    [Utl_Dynamic_Module_Category].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Module_Category].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Module_Category].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Module_Category].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Module_Category].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Module_Category].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Module_Category].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Module_Category].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Module_Category].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Module_Category].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Module_Category].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Module_Category].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Module_Category].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Module_Category].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Module_Category].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Module_Category].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Module_Category].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Module_Category].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Module_Category].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Module_Category].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Module_Category] AS [Utl_Dynamic_Module_Category]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Operator" EntityType="Self.Utl_Dynamic_Operator" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Operator].[OperatorId] AS [OperatorId], 
+    [Utl_Dynamic_Operator].[OperatorValue] AS [OperatorValue], 
+    [Utl_Dynamic_Operator].[OperatorText] AS [OperatorText], 
+    [Utl_Dynamic_Operator].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Operator].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Operator].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Operator].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Operator].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Operator].[Is_Cancel] AS [Is_Cancel], 
+    [Utl_Dynamic_Operator].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Operator].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Operator].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Operator].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Operator].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Operator].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Operator].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Operator].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Operator].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Operator].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Operator].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Operator].[Work_Follow_Position] AS [Work_Follow_Position]
+    FROM [dbo].[Utl_Dynamic_Operator] AS [Utl_Dynamic_Operator]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Sub_Menu" EntityType="Self.Utl_Dynamic_Sub_Menu" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Sub_Menu].[SubMenuID] AS [SubMenuID], 
+    [Utl_Dynamic_Sub_Menu].[MenuID] AS [MenuID], 
+    [Utl_Dynamic_Sub_Menu].[SubMenuName] AS [SubMenuName], 
+    [Utl_Dynamic_Sub_Menu].[CategoryId] AS [CategoryId], 
+    [Utl_Dynamic_Sub_Menu].[Url] AS [Url], 
+    [Utl_Dynamic_Sub_Menu].[DisplayOrder] AS [DisplayOrder], 
+    [Utl_Dynamic_Sub_Menu].[IsVisible] AS [IsVisible], 
+    [Utl_Dynamic_Sub_Menu].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Sub_Menu].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Sub_Menu].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Sub_Menu].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Sub_Menu].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Sub_Menu].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Sub_Menu].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Sub_Menu].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Sub_Menu].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Sub_Menu].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Sub_Menu].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Sub_Menu].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Sub_Menu].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Sub_Menu].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Sub_Menu].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Sub_Menu].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Sub_Menu].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Sub_Menu].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Sub_Menu].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Sub_Menu].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Sub_Menu] AS [Utl_Dynamic_Sub_Menu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Table" EntityType="Self.Utl_Dynamic_Table" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Table].[TableId] AS [TableId], 
+    [Utl_Dynamic_Table].[ModuleId] AS [ModuleId], 
+    [Utl_Dynamic_Table].[ApplicationId] AS [ApplicationId], 
+    [Utl_Dynamic_Table].[TableCaption] AS [TableCaption], 
+    [Utl_Dynamic_Table].[ModuleTableCaption] AS [ModuleTableCaption], 
+    [Utl_Dynamic_Table].[TableName] AS [TableName], 
+    [Utl_Dynamic_Table].[RefreshType] AS [RefreshType], 
+    [Utl_Dynamic_Table].[ParentTableId] AS [ParentTableId], 
+    [Utl_Dynamic_Table].[ForeignTableId] AS [ForeignTableId], 
+    [Utl_Dynamic_Table].[IsExternalDataShow] AS [IsExternalDataShow], 
+    [Utl_Dynamic_Table].[ExternalDataCaption] AS [ExternalDataCaption], 
+    [Utl_Dynamic_Table].[ExternalDataFilter] AS [ExternalDataFilter], 
+    [Utl_Dynamic_Table].[ExistingTableId] AS [ExistingTableId], 
+    [Utl_Dynamic_Table].[ModuleWidth] AS [ModuleWidth], 
+    [Utl_Dynamic_Table].[ModuleHeight] AS [ModuleHeight], 
+    [Utl_Dynamic_Table].[FormWidth] AS [FormWidth], 
+    [Utl_Dynamic_Table].[PositionExp] AS [PositionExp], 
+    [Utl_Dynamic_Table].[RowPosition] AS [RowPosition], 
+    [Utl_Dynamic_Table].[ColPosition] AS [ColPosition], 
+    [Utl_Dynamic_Table].[IsReadOnly] AS [IsReadOnly], 
+    [Utl_Dynamic_Table].[IsWorkFollow] AS [IsWorkFollow], 
+    [Utl_Dynamic_Table].[IsAutoToggle] AS [IsAutoToggle], 
+    [Utl_Dynamic_Table].[ProcedureName] AS [ProcedureName], 
+    [Utl_Dynamic_Table].[ProcedureCaption] AS [ProcedureCaption], 
+    [Utl_Dynamic_Table].[ProcedureValidation] AS [ProcedureValidation], 
+    [Utl_Dynamic_Table].[ProcFireOnTrans] AS [ProcFireOnTrans], 
+    [Utl_Dynamic_Table].[ReportProcedureName] AS [ReportProcedureName], 
+    [Utl_Dynamic_Table].[RptProcForWorksheet] AS [RptProcForWorksheet], 
+    [Utl_Dynamic_Table].[ProcFooterView] AS [ProcFooterView], 
+    [Utl_Dynamic_Table].[ProcFooterDml] AS [ProcFooterDml], 
+    [Utl_Dynamic_Table].[ReportFileName] AS [ReportFileName], 
+    [Utl_Dynamic_Table].[ShowOnReport] AS [ShowOnReport], 
+    [Utl_Dynamic_Table].[SqlStatement] AS [SqlStatement], 
+    [Utl_Dynamic_Table].[ObjectType] AS [ObjectType], 
+    [Utl_Dynamic_Table].[TemplateType] AS [TemplateType], 
+    [Utl_Dynamic_Table].[SlNo] AS [SlNo], 
+    [Utl_Dynamic_Table].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Table].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Table].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Table].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Table].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Table].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Table].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Table].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Table].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Table].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Table].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Table].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Table].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Table].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Table].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Table].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Table].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Table].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Table].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Table].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Table] AS [Utl_Dynamic_Table]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Table_Function" EntityType="Self.Utl_Dynamic_Table_Function" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Table_Function].[TableFunctionId] AS [TableFunctionId], 
+    [Utl_Dynamic_Table_Function].[TableId] AS [TableId], 
+    [Utl_Dynamic_Table_Function].[ColumnName] AS [ColumnName], 
+    [Utl_Dynamic_Table_Function].[AggregateFunction] AS [AggregateFunction], 
+    [Utl_Dynamic_Table_Function].[EvaluateValue] AS [EvaluateValue], 
+    [Utl_Dynamic_Table_Function].[EffectColumn] AS [EffectColumn], 
+    [Utl_Dynamic_Table_Function].[IsDataShort] AS [IsDataShort], 
+    [Utl_Dynamic_Table_Function].[IsDescending] AS [IsDescending], 
+    [Utl_Dynamic_Table_Function].[SLNo] AS [SLNo], 
+    [Utl_Dynamic_Table_Function].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Table_Function].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Table_Function].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Table_Function].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Table_Function].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Table_Function].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Table_Function].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Table_Function].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Table_Function].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Table_Function].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Table_Function].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Table_Function].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Table_Function].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Table_Function].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Table_Function].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Table_Function].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Table_Function].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Table_Function].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Table_Function].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Table_Function].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Table_Function] AS [Utl_Dynamic_Table_Function]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Utl_Dynamic_Validation_Property" EntityType="Self.Utl_Dynamic_Validation_Property" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Validation_Property].[PropertyId] AS [PropertyId], 
+    [Utl_Dynamic_Validation_Property].[ColumnId] AS [ColumnId], 
+    [Utl_Dynamic_Validation_Property].[TableId] AS [TableId], 
+    [Utl_Dynamic_Validation_Property].[OperatorId] AS [OperatorId], 
+    [Utl_Dynamic_Validation_Property].[ValueExpression] AS [ValueExpression], 
+    [Utl_Dynamic_Validation_Property].[ValueDataType] AS [ValueDataType], 
+    [Utl_Dynamic_Validation_Property].[ErrorMessage] AS [ErrorMessage], 
+    [Utl_Dynamic_Validation_Property].[IsActive] AS [IsActive], 
+    [Utl_Dynamic_Validation_Property].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Validation_Property].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Validation_Property].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Validation_Property].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Validation_Property].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Validation_Property].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Validation_Property].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Validation_Property].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Validation_Property].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Validation_Property].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Validation_Property].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Validation_Property].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Validation_Property].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Validation_Property].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Validation_Property].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Validation_Property].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Validation_Property].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Validation_Property].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Validation_Property].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Validation_Property].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Validation_Property] AS [Utl_Dynamic_Validation_Property]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

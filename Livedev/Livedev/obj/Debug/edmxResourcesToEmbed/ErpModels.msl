@@ -1,0 +1,761 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ErpModelStoreContainer" CdmEntityContainer="ErpContext">
+    <EntitySetMapping Name="Utl_Dynamic_Table_Column">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Table_Column">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Table_Column">
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="SelectColumnName" ColumnName="SelectColumnName" />
+          <ScalarProperty Name="ColumnDisplayName" ColumnName="ColumnDisplayName" />
+          <ScalarProperty Name="ColumnProperty" ColumnName="ColumnProperty" />
+          <ScalarProperty Name="ControlType" ColumnName="ControlType" />
+          <ScalarProperty Name="ParentColumn" ColumnName="ParentColumn" />
+          <ScalarProperty Name="ForeignKeyName" ColumnName="ForeignKeyName" />
+          <ScalarProperty Name="ForeignColumnName" ColumnName="ForeignColumnName" />
+          <ScalarProperty Name="ForeignDataFilterBy" ColumnName="ForeignDataFilterBy" />
+          <ScalarProperty Name="ColumnWidth" ColumnName="ColumnWidth" />
+          <ScalarProperty Name="DbColumnWidth" ColumnName="DbColumnWidth" />
+          <ScalarProperty Name="TransPolicyId" ColumnName="TransPolicyId" />
+          <ScalarProperty Name="GlobalParamId" ColumnName="GlobalParamId" />
+          <ScalarProperty Name="GlobalParamValue" ColumnName="GlobalParamValue" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="FilterBy" ColumnName="FilterBy" />
+          <ScalarProperty Name="User_Privilege" ColumnName="User_Privilege" />
+          <ScalarProperty Name="IsModuleSelect" ColumnName="IsModuleSelect" />
+          <ScalarProperty Name="IsFvSelect" ColumnName="IsFvSelect" />
+          <ScalarProperty Name="IsGvSelect" ColumnName="IsGvSelect" />
+          <ScalarProperty Name="IsForeignTable" ColumnName="IsForeignTable" />
+          <ScalarProperty Name="IsDefaultFocus" ColumnName="IsDefaultFocus" />
+          <ScalarProperty Name="IsFvUpdate" ColumnName="IsFvUpdate" />
+          <ScalarProperty Name="IsFvInsert" ColumnName="IsFvInsert" />
+          <ScalarProperty Name="IsFvDataFixed" ColumnName="IsFvDataFixed" />
+          <ScalarProperty Name="IsFvForceEdit" ColumnName="IsFvForceEdit" />
+          <ScalarProperty Name="DdlDataSource" ColumnName="DdlDataSource" />
+          <ScalarProperty Name="LovTableId" ColumnName="LovTableId" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ColumnValue" ColumnName="ColumnValue" />
+          <ScalarProperty Name="ColumnText" ColumnName="ColumnText" />
+          <ScalarProperty Name="ColumnTextExp" ColumnName="ColumnTextExp" />
+          <ScalarProperty Name="WhereExpression" ColumnName="WhereExpression" />
+          <ScalarProperty Name="OrderByExpression" ColumnName="OrderByExpression" />
+          <ScalarProperty Name="SqlExpression" ColumnName="SqlExpression" />
+          <ScalarProperty Name="LinkType" ColumnName="LinkType" />
+          <ScalarProperty Name="LinkPageId" ColumnName="LinkPageId" />
+          <ScalarProperty Name="LinkTableId" ColumnName="LinkTableId" />
+          <ScalarProperty Name="LinkColumnName" ColumnName="LinkColumnName" />
+          <ScalarProperty Name="LinkUrl" ColumnName="LinkUrl" />
+          <ScalarProperty Name="IsShow" ColumnName="IsShow" />
+          <ScalarProperty Name="ReportColumn" ColumnName="ReportColumn" />
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Autocode_Property">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Autocode_Property">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Autocode_Property">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="FormatType" ColumnName="FormatType" />
+          <ScalarProperty Name="Format" ColumnName="Format" />
+          <ScalarProperty Name="Expression" ColumnName="Expression" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Company">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Company">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Company">
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="ReturnTypeId" ColumnName="ReturnTypeId" />
+          <ScalarProperty Name="Mushak_Id" ColumnName="Mushak_Id" />
+          <ScalarProperty Name="Is_Vat_Inc" ColumnName="Is_Vat_Inc" />
+          <ScalarProperty Name="Is_Fifo" ColumnName="Is_Fifo" />
+          <ScalarProperty Name="Is_Rebate_Ratio" ColumnName="Is_Rebate_Ratio" />
+          <ScalarProperty Name="Is_Deemed_Sale" ColumnName="Is_Deemed_Sale" />
+          <ScalarProperty Name="AV_Perc" ColumnName="AV_Perc" />
+          <ScalarProperty Name="CN_DN_Valid" ColumnName="CN_DN_Valid" />
+          <ScalarProperty Name="Eco_Activity_Id" ColumnName="Eco_Activity_Id" />
+          <ScalarProperty Name="Owner_Type_Id" ColumnName="Owner_Type_Id" />
+          <ScalarProperty Name="Comp_Catg_Id" ColumnName="Comp_Catg_Id" />
+          <ScalarProperty Name="Comp_Type_Id" ColumnName="Comp_Type_Id" />
+          <ScalarProperty Name="Is_Dealer" ColumnName="Is_Dealer" />
+          <ScalarProperty Name="Return_Period" ColumnName="Return_Period" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAlis" ColumnName="CompanyAlis" />
+          <ScalarProperty Name="Owner_Name" ColumnName="Owner_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Contact" ColumnName="Contact" />
+          <ScalarProperty Name="Contact_Person" ColumnName="Contact_Person" />
+          <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+          <ScalarProperty Name="Fax_No" ColumnName="Fax_No" />
+          <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+          <ScalarProperty Name="National_Id" ColumnName="National_Id" />
+          <ScalarProperty Name="Tin_No" ColumnName="Tin_No" />
+          <ScalarProperty Name="Is_Central_Reg" ColumnName="Is_Central_Reg" />
+          <ScalarProperty Name="Vat_No" ColumnName="Vat_No" />
+          <ScalarProperty Name="Thana_Id" ColumnName="Thana_Id" />
+          <ScalarProperty Name="Distric_Id" ColumnName="Distric_Id" />
+          <ScalarProperty Name="Post_Code" ColumnName="Post_Code" />
+          <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+          <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+          <ScalarProperty Name="LogoImage" ColumnName="LogoImage" />
+          <ScalarProperty Name="GroupLogoImage" ColumnName="GroupLogoImage" />
+          <ScalarProperty Name="SmtpOut" ColumnName="SmtpOut" />
+          <ScalarProperty Name="SmtpPort" ColumnName="SmtpPort" />
+          <ScalarProperty Name="MailFromUser" ColumnName="MailFromUser" />
+          <ScalarProperty Name="MailUserPassword" ColumnName="MailUserPassword" />
+          <ScalarProperty Name="Delay_Time" ColumnName="Delay_Time" />
+          <ScalarProperty Name="Db_Name" ColumnName="Db_Name" />
+          <ScalarProperty Name="Backup_Path" ColumnName="Backup_Path" />
+          <ScalarProperty Name="OP_VAT" ColumnName="OP_VAT" />
+          <ScalarProperty Name="OP_SD" ColumnName="OP_SD" />
+          <ScalarProperty Name="Adjust_Perc" ColumnName="Adjust_Perc" />
+          <ScalarProperty Name="VAT_Adj_Amt" ColumnName="VAT_Adj_Amt" />
+          <ScalarProperty Name="SD_Adj_Amt" ColumnName="SD_Adj_Amt" />
+          <ScalarProperty Name="VAT_Bal_Amt" ColumnName="VAT_Bal_Amt" />
+          <ScalarProperty Name="SD_Bal_Amt" ColumnName="SD_Bal_Amt" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Company_Group">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Company_Group">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Company_Group">
+          <ScalarProperty Name="GroupId" ColumnName="GroupId" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupAlis" ColumnName="GroupAlis" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Company_Logo">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Company_Logo">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Company_Logo">
+          <ScalarProperty Name="LOGO_ID" ColumnName="LOGO_ID" />
+          <ScalarProperty Name="LOGO_PATH" ColumnName="LOGO_PATH" />
+          <ScalarProperty Name="LOGO_SL" ColumnName="LOGO_SL" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Company_Owner">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Company_Owner">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Company_Owner">
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+          <ScalarProperty Name="OwnerCode" ColumnName="OwnerCode" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="OwnerDesignation" ColumnName="OwnerDesignation" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="Sl" ColumnName="Sl" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Company_Project">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Company_Project">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Company_Project">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+          <ScalarProperty Name="ProjectAlis" ColumnName="ProjectAlis" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="LogoPath" ColumnName="LogoPath" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Database_Module">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Database_Module">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Database_Module">
+          <ScalarProperty Name="DatabaseId" ColumnName="DatabaseId" />
+          <ScalarProperty Name="DatabaseName" ColumnName="DatabaseName" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleAlis" ColumnName="ModuleAlis" />
+          <ScalarProperty Name="Dynamic_Page" ColumnName="Dynamic_Page" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="ImageFile" ColumnName="ImageFile" />
+          <ScalarProperty Name="ServerName" ColumnName="ServerName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="IsDeleteBtn" ColumnName="IsDeleteBtn" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Sl" ColumnName="Sl" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Database_Module_Type">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Database_Module_Type">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Database_Module_Type">
+          <ScalarProperty Name="ModuleTypeId" ColumnName="ModuleTypeId" />
+          <ScalarProperty Name="CompanyId" ColumnName="CompanyId" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Dropdown_Property">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Dropdown_Property">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Dropdown_Property">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="PropertyType" ColumnName="PropertyType" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="ColumnValue" ColumnName="ColumnValue" />
+          <ScalarProperty Name="ColumnText" ColumnName="ColumnText" />
+          <ScalarProperty Name="ColumnTextExp" ColumnName="ColumnTextExp" />
+          <ScalarProperty Name="WhereExpression" ColumnName="WhereExpression" />
+          <ScalarProperty Name="OrderByExpression" ColumnName="OrderByExpression" />
+          <ScalarProperty Name="SqlExpression" ColumnName="SqlExpression" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Filter_Property">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Filter_Property">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Filter_Property">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="AndExpression" ColumnName="AndExpression" />
+          <ScalarProperty Name="OrExpression" ColumnName="OrExpression" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Global_Param">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Global_Param">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Global_Param">
+          <ScalarProperty Name="ParamId" ColumnName="ParamId" />
+          <ScalarProperty Name="ParamName" ColumnName="ParamName" />
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Menu">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Menu">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Menu">
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="MenuName" ColumnName="MenuName" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Module">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Module">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Module">
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ExistingModuleId" ColumnName="ExistingModuleId" />
+          <ScalarProperty Name="IsNewCopy" ColumnName="IsNewCopy" />
+          <ScalarProperty Name="ModuleName" ColumnName="ModuleName" />
+          <ScalarProperty Name="ModuleCaption" ColumnName="ModuleCaption" />
+          <ScalarProperty Name="ReportTitle" ColumnName="ReportTitle" />
+          <ScalarProperty Name="IsDrilldownReport" ColumnName="IsDrilldownReport" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="ModuleType" ColumnName="ModuleType" />
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Module_Category">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Module_Category">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Module_Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ModuleCategory" ColumnName="ModuleCategory" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="Sl" ColumnName="Sl" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Operator">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Operator">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Operator">
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="OperatorValue" ColumnName="OperatorValue" />
+          <ScalarProperty Name="OperatorText" ColumnName="OperatorText" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Sub_Menu">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Sub_Menu">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Sub_Menu">
+          <ScalarProperty Name="SubMenuID" ColumnName="SubMenuID" />
+          <ScalarProperty Name="MenuID" ColumnName="MenuID" />
+          <ScalarProperty Name="SubMenuName" ColumnName="SubMenuName" />
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="DisplayOrder" ColumnName="DisplayOrder" />
+          <ScalarProperty Name="IsVisible" ColumnName="IsVisible" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Table">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Table">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Table">
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="TableCaption" ColumnName="TableCaption" />
+          <ScalarProperty Name="ModuleTableCaption" ColumnName="ModuleTableCaption" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="RefreshType" ColumnName="RefreshType" />
+          <ScalarProperty Name="ParentTableId" ColumnName="ParentTableId" />
+          <ScalarProperty Name="ForeignTableId" ColumnName="ForeignTableId" />
+          <ScalarProperty Name="IsExternalDataShow" ColumnName="IsExternalDataShow" />
+          <ScalarProperty Name="ExternalDataCaption" ColumnName="ExternalDataCaption" />
+          <ScalarProperty Name="ExternalDataFilter" ColumnName="ExternalDataFilter" />
+          <ScalarProperty Name="ExistingTableId" ColumnName="ExistingTableId" />
+          <ScalarProperty Name="ModuleWidth" ColumnName="ModuleWidth" />
+          <ScalarProperty Name="ModuleHeight" ColumnName="ModuleHeight" />
+          <ScalarProperty Name="FormWidth" ColumnName="FormWidth" />
+          <ScalarProperty Name="PositionExp" ColumnName="PositionExp" />
+          <ScalarProperty Name="RowPosition" ColumnName="RowPosition" />
+          <ScalarProperty Name="ColPosition" ColumnName="ColPosition" />
+          <ScalarProperty Name="IsReadOnly" ColumnName="IsReadOnly" />
+          <ScalarProperty Name="IsWorkFollow" ColumnName="IsWorkFollow" />
+          <ScalarProperty Name="IsAutoToggle" ColumnName="IsAutoToggle" />
+          <ScalarProperty Name="ProcedureName" ColumnName="ProcedureName" />
+          <ScalarProperty Name="ProcedureCaption" ColumnName="ProcedureCaption" />
+          <ScalarProperty Name="ProcedureValidation" ColumnName="ProcedureValidation" />
+          <ScalarProperty Name="ProcFireOnTrans" ColumnName="ProcFireOnTrans" />
+          <ScalarProperty Name="ReportProcedureName" ColumnName="ReportProcedureName" />
+          <ScalarProperty Name="RptProcForWorksheet" ColumnName="RptProcForWorksheet" />
+          <ScalarProperty Name="ProcFooterView" ColumnName="ProcFooterView" />
+          <ScalarProperty Name="ProcFooterDml" ColumnName="ProcFooterDml" />
+          <ScalarProperty Name="ReportFileName" ColumnName="ReportFileName" />
+          <ScalarProperty Name="ShowOnReport" ColumnName="ShowOnReport" />
+          <ScalarProperty Name="SqlStatement" ColumnName="SqlStatement" />
+          <ScalarProperty Name="ObjectType" ColumnName="ObjectType" />
+          <ScalarProperty Name="TemplateType" ColumnName="TemplateType" />
+          <ScalarProperty Name="SlNo" ColumnName="SlNo" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Table_Function">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Table_Function">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Table_Function">
+          <ScalarProperty Name="TableFunctionId" ColumnName="TableFunctionId" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="ColumnName" ColumnName="ColumnName" />
+          <ScalarProperty Name="AggregateFunction" ColumnName="AggregateFunction" />
+          <ScalarProperty Name="EvaluateValue" ColumnName="EvaluateValue" />
+          <ScalarProperty Name="EffectColumn" ColumnName="EffectColumn" />
+          <ScalarProperty Name="IsDataShort" ColumnName="IsDataShort" />
+          <ScalarProperty Name="IsDescending" ColumnName="IsDescending" />
+          <ScalarProperty Name="SLNo" ColumnName="SLNo" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Utl_Dynamic_Validation_Property">
+      <EntityTypeMapping TypeName="ErpModel.Utl_Dynamic_Validation_Property">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Validation_Property">
+          <ScalarProperty Name="PropertyId" ColumnName="PropertyId" />
+          <ScalarProperty Name="ColumnId" ColumnName="ColumnId" />
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="OperatorId" ColumnName="OperatorId" />
+          <ScalarProperty Name="ValueExpression" ColumnName="ValueExpression" />
+          <ScalarProperty Name="ValueDataType" ColumnName="ValueDataType" />
+          <ScalarProperty Name="ErrorMessage" ColumnName="ErrorMessage" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

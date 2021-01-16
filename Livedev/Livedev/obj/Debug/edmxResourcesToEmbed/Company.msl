@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ErpModelModelStoreContainer" CdmEntityContainer="ErpModelEntities">
+    <EntitySetMapping Name="Utl_Dynamic_Module_Category">
+      <EntityTypeMapping TypeName="ErpModelModel.Utl_Dynamic_Module_Category">
+        <MappingFragment StoreEntitySet="Utl_Dynamic_Module_Category">
+          <ScalarProperty Name="CategoryId" ColumnName="CategoryId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="ModuleCategory" ColumnName="ModuleCategory" />
+          <ScalarProperty Name="IsSystem" ColumnName="IsSystem" />
+          <ScalarProperty Name="Sl" ColumnName="Sl" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="DeveloperSyncId" ColumnName="DeveloperSyncId" />
+          <ScalarProperty Name="Entry_User_Id" ColumnName="Entry_User_Id" />
+          <ScalarProperty Name="Entry_By" ColumnName="Entry_By" />
+          <ScalarProperty Name="Entry_Date" ColumnName="Entry_Date" />
+          <ScalarProperty Name="Update_By" ColumnName="Update_By" />
+          <ScalarProperty Name="Update_Date" ColumnName="Update_Date" />
+          <ScalarProperty Name="Check_By" ColumnName="Check_By" />
+          <ScalarProperty Name="Check_Date" ColumnName="Check_Date" />
+          <ScalarProperty Name="Approve_By" ColumnName="Approve_By" />
+          <ScalarProperty Name="Approve_Date" ColumnName="Approve_Date" />
+          <ScalarProperty Name="Delete_By" ColumnName="Delete_By" />
+          <ScalarProperty Name="Delete_Date" ColumnName="Delete_Date" />
+          <ScalarProperty Name="Is_Approved" ColumnName="Is_Approved" />
+          <ScalarProperty Name="Is_Active" ColumnName="Is_Active" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Work_Follow_Position" ColumnName="Work_Follow_Position" />
+          <ScalarProperty Name="Row_Id" ColumnName="Row_Id" />
+          <ScalarProperty Name="Cancel_By" ColumnName="Cancel_By" />
+          <ScalarProperty Name="Cancel_Date" ColumnName="Cancel_Date" />
+          <ScalarProperty Name="Is_Cancel" ColumnName="Is_Cancel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

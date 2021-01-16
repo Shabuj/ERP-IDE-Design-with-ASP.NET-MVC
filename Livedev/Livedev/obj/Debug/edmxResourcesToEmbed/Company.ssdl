@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ErpModelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ErpModel.dbo.Utl_Dynamic_Module_Category' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Utl_Dynamic_Module_Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+      <PropertyRef Name="Is_Approved" />
+      <PropertyRef Name="Is_Active" />
+      <PropertyRef Name="Is_Deleted" />
+      <PropertyRef Name="Work_Follow_Position" />
+      <PropertyRef Name="Row_Id" />
+      <PropertyRef Name="Is_Cancel" />
+    </Key>
+    <Property Name="CategoryId" Type="bigint" Nullable="false" />
+    <Property Name="ApplicationId" Type="int" />
+    <Property Name="ModuleCategory" Type="varchar" MaxLength="200" />
+    <Property Name="IsSystem" Type="bit" />
+    <Property Name="Sl" Type="int" />
+    <Property Name="Code" Type="varchar" MaxLength="50" />
+    <Property Name="DeveloperSyncId" Type="varchar" MaxLength="100" />
+    <Property Name="Entry_User_Id" Type="bigint" />
+    <Property Name="Entry_By" Type="varchar" MaxLength="400" />
+    <Property Name="Entry_Date" Type="smalldatetime" />
+    <Property Name="Update_By" Type="varchar" MaxLength="400" />
+    <Property Name="Update_Date" Type="smalldatetime" />
+    <Property Name="Check_By" Type="varchar" MaxLength="400" />
+    <Property Name="Check_Date" Type="datetime" />
+    <Property Name="Approve_By" Type="varchar" MaxLength="400" />
+    <Property Name="Approve_Date" Type="smalldatetime" />
+    <Property Name="Delete_By" Type="varchar" MaxLength="400" />
+    <Property Name="Delete_Date" Type="datetime" />
+    <Property Name="Is_Approved" Type="bit" Nullable="false" />
+    <Property Name="Is_Active" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="Work_Follow_Position" Type="int" Nullable="false" />
+    <Property Name="Row_Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cancel_By" Type="varchar" MaxLength="400" />
+    <Property Name="Cancel_Date" Type="datetime" />
+    <Property Name="Is_Cancel" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ErpModelModelStoreContainer">
+    <EntitySet Name="Utl_Dynamic_Module_Category" EntityType="Self.Utl_Dynamic_Module_Category" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Utl_Dynamic_Module_Category].[CategoryId] AS [CategoryId], 
+    [Utl_Dynamic_Module_Category].[ApplicationId] AS [ApplicationId], 
+    [Utl_Dynamic_Module_Category].[ModuleCategory] AS [ModuleCategory], 
+    [Utl_Dynamic_Module_Category].[IsSystem] AS [IsSystem], 
+    [Utl_Dynamic_Module_Category].[Sl] AS [Sl], 
+    [Utl_Dynamic_Module_Category].[Code] AS [Code], 
+    [Utl_Dynamic_Module_Category].[DeveloperSyncId] AS [DeveloperSyncId], 
+    [Utl_Dynamic_Module_Category].[Entry_User_Id] AS [Entry_User_Id], 
+    [Utl_Dynamic_Module_Category].[Entry_By] AS [Entry_By], 
+    [Utl_Dynamic_Module_Category].[Entry_Date] AS [Entry_Date], 
+    [Utl_Dynamic_Module_Category].[Update_By] AS [Update_By], 
+    [Utl_Dynamic_Module_Category].[Update_Date] AS [Update_Date], 
+    [Utl_Dynamic_Module_Category].[Check_By] AS [Check_By], 
+    [Utl_Dynamic_Module_Category].[Check_Date] AS [Check_Date], 
+    [Utl_Dynamic_Module_Category].[Approve_By] AS [Approve_By], 
+    [Utl_Dynamic_Module_Category].[Approve_Date] AS [Approve_Date], 
+    [Utl_Dynamic_Module_Category].[Delete_By] AS [Delete_By], 
+    [Utl_Dynamic_Module_Category].[Delete_Date] AS [Delete_Date], 
+    [Utl_Dynamic_Module_Category].[Is_Approved] AS [Is_Approved], 
+    [Utl_Dynamic_Module_Category].[Is_Active] AS [Is_Active], 
+    [Utl_Dynamic_Module_Category].[Is_Deleted] AS [Is_Deleted], 
+    [Utl_Dynamic_Module_Category].[Work_Follow_Position] AS [Work_Follow_Position], 
+    [Utl_Dynamic_Module_Category].[Row_Id] AS [Row_Id], 
+    [Utl_Dynamic_Module_Category].[Cancel_By] AS [Cancel_By], 
+    [Utl_Dynamic_Module_Category].[Cancel_Date] AS [Cancel_Date], 
+    [Utl_Dynamic_Module_Category].[Is_Cancel] AS [Is_Cancel]
+    FROM [dbo].[Utl_Dynamic_Module_Category] AS [Utl_Dynamic_Module_Category]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
